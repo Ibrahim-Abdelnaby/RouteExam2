@@ -1,0 +1,235 @@
+/* ============================= General Rules ============================= */
+:root {
+  --primaryColor: #fdcc0f;
+  --darkPrimary: #f4af00;
+  --shadow: #fdaa0f4d;
+}
+
+main {
+  margin: 50px 0 !important;
+}
+
+section {
+  margin-top: 50px !important;
+}
+@media screen and (min-width: 992px) {
+  section,
+  main {
+    margin: 20px 0 !important;
+  }
+}
+
+/* ============================= Loading Screen ============================= */
+
+.lds-hourglass,
+.lds-hourglass:after {
+  box-sizing: border-box;
+}
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid var(--primaryColor);
+  border-color: var(--primaryColor) transparent var(--primaryColor) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.loadingScreen {
+  z-index: 2000;
+}
+
+/* ============================= Header & Navbar ============================= */
+.nav-item,
+.socialIcons i,
+.mealInfo,
+.mealCateg,
+.mealArea,
+.mealIngradient {
+  cursor: pointer;
+}
+
+.navIcons {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-right: 2px solid var(--shadow);
+}
+
+header {
+  z-index: 999 !important;
+  left: -250px;
+}
+
+.socialIcons i {
+  -webkit-transition: color 500ms;
+  -o-transition: color 500ms;
+  transition: color 500ms;
+}
+
+.socialIcons i:hover {
+  color: var(--darkPrimary);
+}
+
+.navMenu {
+  max-width: 250px;
+}
+
+.navIcons,
+.mobileBtn {
+  width: 60px !important;
+}
+.nav-link {
+  font-size: 17px;
+  -webkit-transition: color 300ms;
+  -o-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--primaryColor) !important;
+}
+
+.nav-item {
+  top: 280px;
+}
+
+.nav-item::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--primaryColor);
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  transition: width 500ms;
+  position: absolute;
+  bottom: 1px;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.menuBtn {
+  -webkit-transition: color 300ms;
+  -o-transition: color 300ms;
+  transition: color 300ms;
+}
+
+.menuBtn:hover {
+  color: var(--darkPrimary) !important;
+}
+
+/* ============================= Main section ============================= */
+/* ============================= All meals section ============================= */
+.mealOverlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  -webkit-transition: top 600ms;
+  -o-transition: top 600ms;
+  transition: top 600ms;
+}
+
+.mealInfo:hover .mealOverlay {
+  top: 0 !important;
+  height: 100%;
+}
+
+.mealCateg .mealOverlay {
+  top: 200%;
+}
+
+.mealCateg:hover .mealOverlay {
+  top: 0%;
+}
+
+.fa-house-laptop,
+.fa-drumstick-bite {
+  font-size: 4rem;
+}
+
+/* ============================= Forms sections ============================= */
+.form-control:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem var(--shadow) !important;
+  box-shadow: 0 0 0 0.25rem var(--shadow) !important;
+  border-color: var(--primaryColor) !important;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: grey !important;
+}
+
+.form-control::-moz-placeholder {
+  color: grey !important;
+}
+
+.form-control:-ms-input-placeholder {
+  color: grey !important;
+}
+
+.form-control::-ms-input-placeholder {
+  color: grey !important;
+}
+
+.form-control::placeholder {
+  color: grey !important;
+}
+
+.btn {
+  -webkit-transition: color 300ms, background-color 500ms !important;
+  -o-transition: color 300ms, background-color 500ms !important;
+  transition: color 300ms, background-color 500ms !important;
+}
+
+.formInput p {
+  min-height: 50px;
+}
+/* ============================= Hide arrows from number input ============================= */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.searchSec {
+  z-index: 800;
+}
+/* ============================= Meal details section ============================= */
+.mealInst ol {
+  list-style-position: inside;
+}
+
+.recipe p,
+.tag p {
+  font-size: 0.95rem;
+}
+
+.recipe {
+  min-height: 40px;
+}
