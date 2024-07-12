@@ -1,4 +1,4 @@
-# 🍔 Route Academy Food Website 🍕
+# 🍔 Route Academy Yummy Exam 🍕
 
 This is the GitHub repo for the Route Academy Frontend Diploma Exam, where we build a comprehensive food/meals website using HTML, CSS, JavaScript, jQuery, and Bootstrap. The website fetches data from an API and displays a wide range of information about various meals, including instructions, origin, category, recipes, and more.
 
